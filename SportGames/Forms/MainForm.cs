@@ -20,14 +20,24 @@ namespace SportGames.Forms
 
         }
         #region Page1
-        public void UpdateCompetitions()
+        public void UpdateCompetitions(string word = null)
         {
             listBox1.Items.Clear();
 
             using (DataContext context = new DataContext())
             {
-                var ls = context.Competitions.ToList();
-                foreach (var c in ls)
+                List<Competition> competitions;
+                if (word != null)
+                {
+                    competitions = context.Competitions.Where(n => n.Name.ToLower().Contains(word.ToLower())).ToList();          
+                }
+                else
+                {
+                    competitions = context.Competitions.ToList();
+                }
+
+                
+                foreach (var c in competitions)
                 {
                     listBox1.Items.Add(c);
                 }
@@ -637,6 +647,9 @@ namespace SportGames.Forms
 
         }
 
-        
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            UpdateCompetitions(textBox1.Text);
+        }
     }
 }
