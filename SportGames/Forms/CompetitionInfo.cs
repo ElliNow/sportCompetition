@@ -129,12 +129,22 @@ namespace SportGames.Forms
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            label19.Visible = true;
+            textBox8.Visible = true;
+            label20.Visible = true;
+            textBox9.Visible = true;
+            label21.Visible = true;
+            textBox10.Visible = true;
+
             using(DataContext context = new DataContext())
             {
                 var selectedCompetitor = (CompetitorDiscipline)listBox2.SelectedItem;
                 selectedCompetitor = context.CompetitorDesciplines.Find(selectedCompetitor.Id);
 
                 textBox1.Text = selectedCompetitor.Score.ToString();
+                textBox8.Text = selectedCompetitor.Competitor.Sportsman.Name;
+                textBox9.Text = selectedCompetitor.Competitor.Sportsman.Team.Country;
+                textBox10.Text = selectedCompetitor.Competitor.Sportsman.Team.Name; 
             }
         }
 
