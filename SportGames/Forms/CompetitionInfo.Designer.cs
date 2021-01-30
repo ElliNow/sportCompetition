@@ -161,6 +161,7 @@ namespace SportGames.Forms
             // 
             // richTextBox1
             // 
+            this.richTextBox1.Enabled = false;
             this.richTextBox1.Location = new System.Drawing.Point(41, 103);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
@@ -170,6 +171,7 @@ namespace SportGames.Forms
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(41, 265);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -188,6 +190,7 @@ namespace SportGames.Forms
             // 
             // textBox2
             // 
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(41, 41);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
@@ -213,6 +216,7 @@ namespace SportGames.Forms
             // 
             // textBox5
             // 
+            this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(20, 111);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox5.Name = "textBox5";
@@ -241,6 +245,7 @@ namespace SportGames.Forms
             // 
             // textBox4
             // 
+            this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(20, 54);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox4.Name = "textBox4";
@@ -259,6 +264,7 @@ namespace SportGames.Forms
             // 
             // richTextBox2
             // 
+            this.richTextBox2.Enabled = false;
             this.richTextBox2.Location = new System.Drawing.Point(20, 171);
             this.richTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox2.Name = "richTextBox2";
@@ -294,6 +300,7 @@ namespace SportGames.Forms
             // 
             // richTextBox4
             // 
+            this.richTextBox4.Enabled = false;
             this.richTextBox4.Location = new System.Drawing.Point(17, 123);
             this.richTextBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox4.Name = "richTextBox4";
@@ -323,6 +330,7 @@ namespace SportGames.Forms
             // 
             // listBox3
             // 
+            this.listBox3.Enabled = false;
             this.listBox3.FormattingEnabled = true;
             this.listBox3.ItemHeight = 16;
             this.listBox3.Location = new System.Drawing.Point(193, 52);
@@ -333,6 +341,7 @@ namespace SportGames.Forms
             // 
             // textBox3
             // 
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(17, 52);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox3.Name = "textBox3";
@@ -367,6 +376,7 @@ namespace SportGames.Forms
             // 
             // textBox7
             // 
+            this.textBox7.Enabled = false;
             this.textBox7.Location = new System.Drawing.Point(41, 119);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox7.Name = "textBox7";
@@ -385,6 +395,7 @@ namespace SportGames.Forms
             // 
             // richTextBox3
             // 
+            this.richTextBox3.Enabled = false;
             this.richTextBox3.Location = new System.Drawing.Point(41, 199);
             this.richTextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox3.Name = "richTextBox3";
@@ -394,6 +405,7 @@ namespace SportGames.Forms
             // 
             // textBox6
             // 
+            this.textBox6.Enabled = false;
             this.textBox6.Location = new System.Drawing.Point(41, 53);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox6.Name = "textBox6";
@@ -424,6 +436,7 @@ namespace SportGames.Forms
             // 
             // listBox4
             // 
+            this.listBox4.Enabled = false;
             this.listBox4.FormattingEnabled = true;
             this.listBox4.ItemHeight = 16;
             this.listBox4.Location = new System.Drawing.Point(23, 57);
@@ -497,11 +510,13 @@ namespace SportGames.Forms
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(945, 409);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(148, 22);
             this.textBox1.TabIndex = 5;
+            this.textBox1.Visible = false;
             // 
             // label3
             // 
@@ -512,6 +527,7 @@ namespace SportGames.Forms
             this.label3.Size = new System.Drawing.Size(42, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Очки";
+            this.label3.Visible = false;
             // 
             // button2
             // 
@@ -522,6 +538,7 @@ namespace SportGames.Forms
             this.button2.TabIndex = 7;
             this.button2.Text = "Сохранить ";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label17
@@ -549,6 +566,7 @@ namespace SportGames.Forms
             // 
             // textBox8
             // 
+            this.textBox8.Enabled = false;
             this.textBox8.Location = new System.Drawing.Point(945, 135);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(149, 22);
@@ -557,6 +575,7 @@ namespace SportGames.Forms
             // 
             // textBox9
             // 
+            this.textBox9.Enabled = false;
             this.textBox9.Location = new System.Drawing.Point(945, 198);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(149, 22);
@@ -565,6 +584,7 @@ namespace SportGames.Forms
             // 
             // textBox10
             // 
+            this.textBox10.Enabled = false;
             this.textBox10.Location = new System.Drawing.Point(945, 262);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(149, 22);

@@ -13,7 +13,7 @@ namespace SportGames.Models
         public int Id { get; set; }
         public int CompetitorId { get; set; }
         public virtual Competitor Competitor { get; set; }
-        public  int? CompetitionDisciplineId { get; set; }
+        public int? CompetitionDisciplineId { get; set; }
         public virtual CompetitionDiscipline CompetitionDiscipline { get; set; }
         //Заниманимое место
         public int Place { get; set; }
@@ -24,13 +24,11 @@ namespace SportGames.Models
         public override string ToString()
         {
             if (OutputType == OutputType.Detailed)
-                return $"{Competitor.Sportsman.Name} - {CompetitionDiscipline.Discipline.Name}";
-            if (OutputType == OutputType.AddingForm)
                 return $"{Competitor.Sportsman.Name} [{Competitor.Id}]";
+            if (OutputType == OutputType.AddingForm)
+                return $"{Competitor.Sportsman.Name} - {CompetitionDiscipline.Discipline.Name}";
             if (OutputType == OutputType.DetailedWithPlaces)
-            {
                 return $"{Competitor.Sportsman.Name} [{Competitor.Id}] ({Place} место)";
-            }
             return null;
         }
 
@@ -42,5 +40,5 @@ namespace SportGames.Models
         Detailed,
         DetailedWithPlaces
     }
-     
+
 }

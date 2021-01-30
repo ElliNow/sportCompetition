@@ -61,19 +61,21 @@ namespace SportGames.Forms
                     listBox4.Items.Add(referee);
                 }
 
-
                 foreach(var discipline in competition.CompetitionDisciplines)
                 {
                     listBox1.Items.Add(discipline);
                 }
-            }
-
-            
+            }  
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             listBox2.Items.Clear();
+            textBox8.Text = String.Empty;
+            textBox9.Text = String.Empty;
+            textBox10.Text = String.Empty;
+            textBox1.Text = String.Empty;
+            button2.Enabled = false;
 
             if (listBox1.SelectedIndex == -1) return;
             using(DataContext context = new DataContext())
@@ -83,7 +85,7 @@ namespace SportGames.Forms
 
                 selectedDiscipline = context.CompetitionDisciplines
                     .FirstOrDefault(cd => cd.Id == selectedDiscipline.Id);
-                if(competition.EndDate != null)
+                if(competition.EndDate == null)
                 {
                     CompetitorDiscipline.OutputType = OutputType.Detailed;
                     foreach (var competitorDiscipline in selectedDiscipline.CompetitorDisciplines)
@@ -99,9 +101,7 @@ namespace SportGames.Forms
                     {
                         listBox2.Items.Add(competitorDiscipline);
                     }
-
-                }
-                
+                }  
             }
             
         } 
@@ -121,15 +121,18 @@ namespace SportGames.Forms
                     label17.Visible = true;
                     label18.Visible = true;
                     dateTimePicker2.Enabled = true;
-                    
+                    dateTimePicker2.Value = competition.EndDate.Value;
                 }
-            }
-            
+            } 
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            textBox1.Visible = true;
+            button2.Visible = true;
+            
             label19.Visible = true;
+            label3.Visible = true;
             textBox8.Visible = true;
             label20.Visible = true;
             textBox9.Visible = true;
@@ -144,7 +147,14 @@ namespace SportGames.Forms
                 textBox1.Text = selectedCompetitor.Score.ToString();
                 textBox8.Text = selectedCompetitor.Competitor.Sportsman.Name;
                 textBox9.Text = selectedCompetitor.Competitor.Sportsman.Team.Country;
-                textBox10.Text = selectedCompetitor.Competitor.Sportsman.Team.Name; 
+                textBox10.Text = selectedCompetitor.Competitor.Sportsman.Team.Name;
+
+                var competition = context.Competitions.Find(_competitionId);
+                if (competition.EndDate == null)
+                {
+                    textBox1.Enabled = true;
+                    button2.Enabled = true;
+                }
             }
         }
 
@@ -162,27 +172,37 @@ namespace SportGames.Forms
         //Завершение
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
-            CompetitionInfo info = new CompetitionInfo(_competitionId);
-
-            info.Show();
+            
             using(DataContext context = new DataContext())
             {
                 var competition = context.Competitions.Find(_competitionId);
-                dateTimePicker2.Value = competition.EndDate.Value;
-                var competitors = context.CompetitorDesciplines;
+                competition.EndDate = DateTime.Now;
                 
-                //прописать алгоритм вывода по местам.
-                foreach(CompetitorDiscipline i in competitors.OrderBy(p => p.Place))
+               
+                foreach(var discipline in competition.CompetitionDisciplines)
                 {
-                    listBox2.Items.Add(i);
+                    int place = 1;
+                    while (discipline.CompetitorDisciplines.Any(c => c.Place == 0))
+                    {
+                        var competitors = discipline.CompetitorDisciplines;
+                        var maxScore = competitors.Where(c => c.Place == 0).Max(x => x.Score);
+                        var sameScoreCompetitors = competitors.Where(c => c.Score == maxScore);
+
+                        foreach (var i in sameScoreCompetitors)
+                        {
+                            i.Place = place;
+                        }
+                        place++;
+                    }
                 }
+                context.SaveChanges();
             }
-        }
 
-        public void UpdateCompletedCompetition()
-        {
-
+            CompetitionInfo info = new CompetitionInfo(_competitionId);
+            this.Hide();
+            info.ShowDialog();
+            this.Close();
+            
         }
     }
 }
