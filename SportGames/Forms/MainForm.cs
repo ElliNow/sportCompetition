@@ -49,6 +49,7 @@ namespace SportGames.Forms
         //  Просмотр
         private void button20_Click(object sender, EventArgs e)
         {
+            if (listBox1.SelectedIndex == -1) return;
             var competition = (Competition)listBox1.SelectedItem;
             this.Hide();
             CompetitionInfo info = new CompetitionInfo(competition.Id);
@@ -644,7 +645,6 @@ namespace SportGames.Forms
             UpdateReferees();
             //Page6
             UpdateDisciplines();
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

@@ -13,5 +13,10 @@ namespace SportGames.Models
         public virtual Diet Diet { get; set; }
         public  int FoodId { get; set; }
         public virtual Food Food { get; set; }
+
+        public override string ToString()
+        {
+            return Food.Name;
+        }
     }
 }

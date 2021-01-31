@@ -28,7 +28,7 @@ namespace SportGames.Models
         public int DietId { get; set; }
         public virtual Diet Diet { get; set; }
 
-        public double AmountDays { get; set; }
+        public int AmountDays { get; set; }
         
         public virtual ICollection<Competitor> Competitors { get; set; }
         public virtual ICollection<RefereeCompetition> RefereeCompetitions { get; set; }

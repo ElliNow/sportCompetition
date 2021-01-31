@@ -34,3 +34,4 @@ C:\Users\mi\Documents\GitHub\sportCompetition\SportGames\obj\Debug\SportGames.cs
 C:\Users\mi\Documents\GitHub\sportCompetition\SportGames\obj\Debug\SportGames.csproj.CopyComplete
 C:\Users\mi\Documents\GitHub\sportCompetition\SportGames\obj\Debug\SportGames.exe
 C:\Users\mi\Documents\GitHub\sportCompetition\SportGames\obj\Debug\SportGames.pdb
+C:\Users\mi\Documents\GitHub\sportCompetition\SportGames\obj\Debug\SportGames.Forms.CostForm.resources
