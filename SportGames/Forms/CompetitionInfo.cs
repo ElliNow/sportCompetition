@@ -39,6 +39,7 @@ namespace SportGames.Forms
                 textBox2.Text = competition.Name;
                 richTextBox1.Text = competition.Description;
                 dateTimePicker1.Value = competition.BeginDate;
+                textBox11.Text = competition.PrizeFund.ToString();
 
                 textBox4.Text = competition.Housing.Name;
                 textBox5.Text = competition.Housing.CostPerDay.ToString();
@@ -61,11 +62,11 @@ namespace SportGames.Forms
                     listBox4.Items.Add(referee);
                 }
 
-                foreach(var discipline in competition.CompetitionDisciplines)
+                foreach (var discipline in competition.CompetitionDisciplines)
                 {
                     listBox1.Items.Add(discipline);
                 }
-            }  
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -78,14 +79,14 @@ namespace SportGames.Forms
             button2.Enabled = false;
 
             if (listBox1.SelectedIndex == -1) return;
-            using(DataContext context = new DataContext())
+            using (DataContext context = new DataContext())
             {
                 var selectedDiscipline = (CompetitionDiscipline)listBox1.SelectedItem;
                 var competition = context.Competitions.Find(_competitionId);
 
                 selectedDiscipline = context.CompetitionDisciplines
                     .FirstOrDefault(cd => cd.Id == selectedDiscipline.Id);
-                if(competition.EndDate == null)
+                if (competition.EndDate == null)
                 {
                     CompetitorDiscipline.OutputType = OutputType.Detailed;
                     foreach (var competitorDiscipline in selectedDiscipline.CompetitorDisciplines)
@@ -101,16 +102,16 @@ namespace SportGames.Forms
                     {
                         listBox2.Items.Add(competitorDiscipline);
                     }
-                }  
+                }
             }
-            
-        } 
+
+        }
 
         private void CompetitionInfo_Load(object sender, EventArgs e)
         {
             OutputCompetition();
             dateTimePicker2.Enabled = false;
-            using(DataContext context = new DataContext())
+            using (DataContext context = new DataContext())
             {
                 var competition = context.Competitions.Find(_competitionId);
                 if (competition.EndDate != null)
@@ -120,17 +121,18 @@ namespace SportGames.Forms
                     textBox1.Enabled = false;
                     label17.Visible = true;
                     label18.Visible = true;
+                    button3.Enabled = true;
                     dateTimePicker2.Enabled = true;
                     dateTimePicker2.Value = competition.EndDate.Value;
                 }
-            } 
+            }
         }
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox1.Visible = true;
             button2.Visible = true;
-            
+
             label19.Visible = true;
             label3.Visible = true;
             textBox8.Visible = true;
@@ -139,7 +141,7 @@ namespace SportGames.Forms
             label21.Visible = true;
             textBox10.Visible = true;
 
-            using(DataContext context = new DataContext())
+            using (DataContext context = new DataContext())
             {
                 var selectedCompetitor = (CompetitorDiscipline)listBox2.SelectedItem;
                 selectedCompetitor = context.CompetitorDesciplines.Find(selectedCompetitor.Id);
@@ -172,14 +174,15 @@ namespace SportGames.Forms
         //Завершение
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            using(DataContext context = new DataContext())
+            using (DataContext context = new DataContext())
             {
                 var competition = context.Competitions.Find(_competitionId);
                 competition.EndDate = DateTime.Now;
-                
-               
-                foreach(var discipline in competition.CompetitionDisciplines)
+                int days = (competition.EndDate - competition.BeginDate).Value.Days;
+                if (days <= 0) days = 1;
+                competition.AmountDays = days;
+
+                foreach (var discipline in competition.CompetitionDisciplines)
                 {
                     int place = 1;
                     while (discipline.CompetitorDisciplines.Any(c => c.Place == 0))
@@ -202,7 +205,15 @@ namespace SportGames.Forms
             this.Hide();
             info.ShowDialog();
             this.Close();
-            
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CostForm costCompetition = new CostForm(_competitionId);
+            costCompetition.ShowDialog();
+
+
         }
     }
 }

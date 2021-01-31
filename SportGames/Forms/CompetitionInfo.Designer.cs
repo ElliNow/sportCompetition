@@ -79,6 +79,8 @@ namespace SportGames.Forms
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -95,7 +97,7 @@ namespace SportGames.Forms
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(16, 89);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(401, 404);
@@ -103,6 +105,8 @@ namespace SportGames.Forms
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label22);
+            this.tabPage1.Controls.Add(this.textBox11);
             this.tabPage1.Controls.Add(this.label18);
             this.tabPage1.Controls.Add(this.dateTimePicker2);
             this.tabPage1.Controls.Add(this.label6);
@@ -112,9 +116,9 @@ namespace SportGames.Forms
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(393, 375);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Общее";
@@ -134,7 +138,7 @@ namespace SportGames.Forms
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(41, 324);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker2.TabIndex = 6;
@@ -163,7 +167,7 @@ namespace SportGames.Forms
             // 
             this.richTextBox1.Enabled = false;
             this.richTextBox1.Location = new System.Drawing.Point(41, 103);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(132, 117);
             this.richTextBox1.TabIndex = 3;
@@ -173,7 +177,7 @@ namespace SportGames.Forms
             // 
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(41, 265);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker1.TabIndex = 2;
@@ -192,7 +196,7 @@ namespace SportGames.Forms
             // 
             this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(41, 41);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(132, 22);
             this.textBox2.TabIndex = 0;
@@ -206,9 +210,9 @@ namespace SportGames.Forms
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.richTextBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(393, 375);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Проживание";
@@ -218,7 +222,7 @@ namespace SportGames.Forms
             // 
             this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(20, 111);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(132, 22);
             this.textBox5.TabIndex = 7;
@@ -247,7 +251,7 @@ namespace SportGames.Forms
             // 
             this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(20, 54);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(132, 22);
             this.textBox4.TabIndex = 4;
@@ -266,7 +270,7 @@ namespace SportGames.Forms
             // 
             this.richTextBox2.Enabled = false;
             this.richTextBox2.Location = new System.Drawing.Point(20, 171);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(132, 117);
             this.richTextBox2.TabIndex = 2;
@@ -281,7 +285,7 @@ namespace SportGames.Forms
             this.tabPage3.Controls.Add(this.listBox3);
             this.tabPage3.Controls.Add(this.textBox3);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(393, 375);
             this.tabPage3.TabIndex = 2;
@@ -302,7 +306,7 @@ namespace SportGames.Forms
             // 
             this.richTextBox4.Enabled = false;
             this.richTextBox4.Location = new System.Drawing.Point(17, 123);
-            this.richTextBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox4.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox4.Name = "richTextBox4";
             this.richTextBox4.Size = new System.Drawing.Size(132, 157);
             this.richTextBox4.TabIndex = 4;
@@ -334,7 +338,7 @@ namespace SportGames.Forms
             this.listBox3.FormattingEnabled = true;
             this.listBox3.ItemHeight = 16;
             this.listBox3.Location = new System.Drawing.Point(193, 52);
-            this.listBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox3.Margin = new System.Windows.Forms.Padding(4);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(159, 228);
             this.listBox3.TabIndex = 1;
@@ -343,7 +347,7 @@ namespace SportGames.Forms
             // 
             this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(17, 52);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(132, 22);
             this.textBox3.TabIndex = 0;
@@ -357,7 +361,7 @@ namespace SportGames.Forms
             this.tabPage4.Controls.Add(this.textBox6);
             this.tabPage4.Controls.Add(this.label12);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(393, 375);
             this.tabPage4.TabIndex = 3;
@@ -378,7 +382,7 @@ namespace SportGames.Forms
             // 
             this.textBox7.Enabled = false;
             this.textBox7.Location = new System.Drawing.Point(41, 119);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(132, 22);
             this.textBox7.TabIndex = 4;
@@ -397,7 +401,7 @@ namespace SportGames.Forms
             // 
             this.richTextBox3.Enabled = false;
             this.richTextBox3.Location = new System.Drawing.Point(41, 199);
-            this.richTextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox3.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(132, 117);
             this.richTextBox3.TabIndex = 2;
@@ -407,7 +411,7 @@ namespace SportGames.Forms
             // 
             this.textBox6.Enabled = false;
             this.textBox6.Location = new System.Drawing.Point(41, 53);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(132, 22);
             this.textBox6.TabIndex = 1;
@@ -427,7 +431,7 @@ namespace SportGames.Forms
             this.tabPage5.Controls.Add(this.listBox4);
             this.tabPage5.Controls.Add(this.label15);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(393, 375);
             this.tabPage5.TabIndex = 4;
@@ -440,7 +444,7 @@ namespace SportGames.Forms
             this.listBox4.FormattingEnabled = true;
             this.listBox4.ItemHeight = 16;
             this.listBox4.Location = new System.Drawing.Point(23, 57);
-            this.listBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox4.Margin = new System.Windows.Forms.Padding(4);
             this.listBox4.Name = "listBox4";
             this.listBox4.Size = new System.Drawing.Size(220, 228);
             this.listBox4.TabIndex = 2;
@@ -460,7 +464,7 @@ namespace SportGames.Forms
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
             this.listBox1.Location = new System.Drawing.Point(453, 114);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(201, 372);
             this.listBox1.TabIndex = 1;
@@ -471,7 +475,7 @@ namespace SportGames.Forms
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 16;
             this.listBox2.Location = new System.Drawing.Point(700, 114);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(4);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(219, 372);
             this.listBox2.TabIndex = 2;
@@ -479,10 +483,10 @@ namespace SportGames.Forms
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(16, 495);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(948, 495);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(396, 28);
+            this.button1.Size = new System.Drawing.Size(145, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "Завершить";
             this.button1.UseVisualStyleBackColor = true;
@@ -512,7 +516,7 @@ namespace SportGames.Forms
             // 
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(945, 409);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(148, 22);
             this.textBox1.TabIndex = 5;
@@ -532,7 +536,7 @@ namespace SportGames.Forms
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(945, 459);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(149, 28);
             this.button2.TabIndex = 7;
@@ -556,13 +560,15 @@ namespace SportGames.Forms
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(16, 530);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Enabled = false;
+            this.button3.Location = new System.Drawing.Point(17, 495);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(396, 28);
             this.button3.TabIndex = 9;
-            this.button3.Text = "Расчитать";
+            this.button3.Text = "Расчитать стоимость";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox8
             // 
@@ -621,6 +627,25 @@ namespace SportGames.Forms
             this.label21.Text = "Команда";
             this.label21.Visible = false;
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(222, 21);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(111, 17);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "Призовой фонд";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Enabled = false;
+            this.textBox11.Location = new System.Drawing.Point(226, 41);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(132, 22);
+            this.textBox11.TabIndex = 8;
+            // 
             // CompetitionInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -643,7 +668,7 @@ namespace SportGames.Forms
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CompetitionInfo";
             this.Text = "CompetitionInfo";
             this.Load += new System.EventHandler(this.CompetitionInfo_Load);
@@ -715,5 +740,7 @@ namespace SportGames.Forms
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox11;
     }
 }

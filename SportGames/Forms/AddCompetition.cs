@@ -32,6 +32,7 @@ namespace SportGames.Forms
                 {
                     competition.Name = textBox1.Text;
                     competition.Location = textBox2.Text;
+                    competition.PrizeFund = Convert.ToDecimal(textBox3.Text);
                     competition.Description = richTextBox1.Text;
                     competition.BeginDate = dateTimePicker1.Value;
 
