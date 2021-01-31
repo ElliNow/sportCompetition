@@ -22,6 +22,11 @@ namespace SportGames.Forms
         #region Page1
         public void CompetitionAdd(object sender, EventArgs e)
         {
+            if (tabControl1.SelectedIndex < 3)
+            {
+                tabControl1.SelectedIndex++;
+                return;
+            }
             using (DataContext context = new DataContext())
             {
                 Competition competition = new Competition();
@@ -36,6 +41,8 @@ namespace SportGames.Forms
                     competition.Description = richTextBox1.Text;
                     competition.BeginDate = dateTimePicker1.Value;
 
+                    if (comboBox1.SelectedItem == null || comboBox2.SelectedItem == null
+                        || comboBox3.SelectedItem == null) return;
                     var dietFeed = (Diet)comboBox3.SelectedItem;
                     competition.DietId = dietFeed.Id;
 
@@ -228,6 +235,18 @@ namespace SportGames.Forms
             UpdateReferees();
             Output();
             UpdateDisciplines();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex > 0)
+            {
+                tabControl1.SelectedIndex--;
+            }
+            else
+            {
+                this.Close();
+            }
         }
     }
 }

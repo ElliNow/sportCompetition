@@ -90,7 +90,7 @@ namespace SportGames.Forms
             using (DataContext context = new DataContext())
             {
                 var sportsman = (Sportsman)listBox2.SelectedItem;
-
+                if (listBox2.SelectedIndex == -1) return;
                 context.Sportsmans.Remove(context.Sportsmans.Find(sportsman.Id));
                 context.SaveChanges();
             }
@@ -194,6 +194,7 @@ namespace SportGames.Forms
             {
                 var team = (Team)listBox3.SelectedItem;
 
+                if (listBox3.SelectedIndex == -1) return;
                 context.Teams.Remove(context.Teams.Find(team.Id));
                 context.SaveChanges();
             }
@@ -272,8 +273,8 @@ namespace SportGames.Forms
             using (DataContext context = new DataContext())
             {
                 var feed = (Diet)listBox4.SelectedItem;
-                
 
+                if (listBox4.SelectedIndex == -1) return;
                 context.Diets.Remove(context.Diets.Find(feed.Id));
                 context.SaveChanges();
             }
@@ -341,6 +342,7 @@ namespace SportGames.Forms
             {
                 var food = (Food)listBox5.SelectedItem;
 
+                if (listBox5.SelectedIndex == -1) return;
                 context.Foods.Remove(context.Foods.Find(food.Id));
                 context.SaveChanges();
             }
@@ -441,6 +443,7 @@ namespace SportGames.Forms
             {
                 var transport = (Transport)listBox8.SelectedItem;
 
+                if (listBox8.SelectedIndex == -1) return;
                 context.Transports.Remove(context.Transports.Find(transport.Id));
                 context.SaveChanges();
             }
@@ -509,6 +512,7 @@ namespace SportGames.Forms
             {
                 var housing = (Housing)listBox9.SelectedItem;
 
+                if (listBox9.SelectedIndex == -1) return;
                 context.Housings.Remove(context.Housings.Find(housing.Id));
                 context.SaveChanges();
             }
@@ -563,6 +567,7 @@ namespace SportGames.Forms
             {
                 var referee = (Referee)listBox7.SelectedItem;
 
+                if (listBox7.SelectedIndex == -1) return;
                 context.Referees.Remove(context.Referees.Find(referee.Id));
                 context.SaveChanges();
             }
@@ -612,6 +617,7 @@ namespace SportGames.Forms
             using(DataContext context = new DataContext())
             {
                 var ls = (Discipline)listBox10.SelectedItem;
+                if (listBox10.SelectedIndex == -1) return;
                 context.Disciplines.Remove(context.Disciplines.Find(ls.Id));
                 context.SaveChanges();
             }
