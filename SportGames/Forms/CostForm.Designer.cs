@@ -136,8 +136,9 @@ namespace SportGames.Forms
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Swis721 Ex BT", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CostForm";
-            this.Text = "CostForm";
+            this.Text = "Расчет стоимости";
             this.Load += new System.EventHandler(this.CostForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
